@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC RESUME GENERATOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"></link>
+    
+</head>
+<body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-3">Resume Generator</h1>
+
+        <div class="row" >
+
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+
+
+                <div class="from-group ">
+                    <label for="NameField">Your Name</label>
+                    <input 
+                         type="text"
+                         id="NameField"
+                         placeholder="Enter Here"
+                         class="from-control"
+                         />
+                </div>
+                <div class="from-group ">
+                    <label for="EmailField">Your Email</label>
+                    <input 
+                         type="email"
+                         id="EmailField"
+                         placeholder="Enter Here"
+                         class="from-control"
+                         />
+                </div>
+                <div class="from-group ">
+                    <label for="ContactField">Your Mobail-No</label>
+                    <input 
+                         type="number"
+                         id="ContactField"
+                         placeholder="Enter Here"
+                         class="from-control"
+                         />
+                </div>
+                <div class="from-group ">
+                    <label for="AddressField">Your Address</label>
+                    <textarea 
+                         id="AddressField"
+                         placeholder="Enter Here"
+                         class="from-control"
+                         ></textarea>
+                </div>
+                <h3>Important Links </h3>
+
+                <div class="from-group ">
+                    <label for="LinkedlnField">Linkedln Link</label>
+                    <input 
+                         type="text"
+                         id="LinkedlnField"
+                         placeholder="Enter Here"
+                         class="from-control"
+                         />
+                </div>
+                <div class="from-group ">
+                    <label for="gitHubField">gitHub Link</label>
+                    <input 
+                         type="text"
+                         id="GitHubField"
+                         placeholder="Enter Here"
+                         class="from-control"
+                         />
+                </div>
+                
+            </div>
+
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+
+                <div class="from-group ">
+                <label for="">Objectives</label>
+                <textarea 
+                     id="ObjectiveField"
+                     placeholder="Enter Here"
+                     class="from-control obfield"
+                     
+                 ></textarea>
+                
+            <div class="from-group" id="we">
+                <label for="">Work Experience</label>
+                <textarea    
+                     placeholder="Enter Here"
+                     class="from-control wefield"  
+                 ></textarea>
+                 <div class="container text-center " id="weAddButton">
+                    <button onclick="addNewweField()" class="btn btn-primary btn-sm">Add</button>
+                 </div>
+
+
+
+                 <div class="from-group" id="aq">
+                    <label for="">Academic_Qualification</label>
+                    <textarea 
+                         placeholder="Enter Here"
+                         class="from-control aqfield"
+                     ></textarea>
+                     <div class="container text-center " id="aqAddButton">
+                        <button onclick="addNewaqField()" class="btn btn-primary btn-sm">Add</button>
+                     </div>
+
+
+
+                     <div class="from-group " id="p">
+                        <label for="">Projects Detail</label>
+                        <textarea 
+                             placeholder="Enter Here"
+                             class="from-control pfield"
+                         ></textarea>
+                         <div class="container text-center" id="pAddButton">
+                            <button onclick="addNewpField()" class="btn btn-primary btn-sm">Add</button>
+                         </div>
+                     </div>
+                     </div> 
+                     <div>
+                        <label for="">Select Photo</label><input type="file" accept="image/*" capture="camera" id="photo1" name="photo1"> 
+                     </div>     
+        </div>
+        <div class="container text-center mt-4">
+             <button onclick="generateCV()" class ="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+ </div>
+ </div>
+</div>
+</div>
+
+    <!-- cv template -->
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center background">
+
+                <!--first col-->
+                <img src="resume-photo.jpeg" 
+                alt=""
+                id="photo2"
+                class="img-fluid"/>
+
+                <div class="cointainer">
+                    <p id="nameT1">VISHAL KANTILAL DHAYGUDE</p>
+                    <p id="emailT">vishaldhaygude902@gmail.com</p>
+                    <P id="contactT">+917083310174</P>
+                    <P id="addressT">AT:Waghoshi Tal:Khandala Dist:Satara</P>
+
+                    <hr/>
+                    <p> <a id="linkedT" href="#1">https://www.linkdin.com/vishaldhaygude</a></p>
+                    <p> <a id="githubT" href="#2">https://www.gitHub.com/vishaldhaygude</a></p>   
+                </div>              
+            </div>
+
+            <div class="col-md-8 py-5">
+                <!--second col-->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">vishaldhaygude</h1>
+
+                 <!--Objective-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="ObjectiveT">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+                             rem odit sint voluptas natus earum omnis necessitatibus ipsam 
+                             eaque aliquid, error molestiae animi tempora labore aliquam ex 
+                             quisquam praesentium. Iste?
+                        </p>
+                   </div>
+                </div>
+
+                 <!--work experience-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>work experience</h3>
+                    </div>
+                    <div class="card-body">
+                     <ul id="weT">
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum</li>
+                        <li>rem odit sint voluptas natus earum omnis necessitatibus ipsam </li>
+                        <li>eaque aliquid, error molestiae animi tempora labore aliquam ex </li>
+                     </ul>
+                   </div>
+                </div>
+                
+                <!--Academic qualification-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic qualification</h3>
+                    </div>
+                    <div class="card-body">
+                     <ul id="aqT">
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum</li>
+                        <li>rem odit sint voluptas natus earum omnis necessitatibus ipsam </li>
+                        <li>eaque aliquid, error molestiae animi tempora labore aliquam ex </li>
+                     </ul>
+                   </div>
+                </div>
+                <!--Projects-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                     <ul id="projectT">
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum</li>
+                        <li>rem odit sint voluptas natus earum omnis necessitatibus ipsam </li>
+                        <li>eaque aliquid, error molestiae animi tempora labore aliquam ex </li>
+                     </ul>
+                   </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">
+                        Print CV
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

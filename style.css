@@ -1,0 +1,36 @@
+body{
+    background-color: azure;
+    
+}
+#cv-form{
+    background-color: chocolate;
+    border-radius: 20px;
+    
+}
+#cv-template{
+    display: none;
+    background-color: darkgoldenrod;
+}
+
+.from-group{
+    font-size: 20px;
+    justify-content: center;   
+    border-radius: 5%;
+}
+.from-control{
+    
+    margin: 20px;
+    width: 500px;
+}
+.myimg{
+    border-radius: 50%;
+    width: 200px;
+}
+.photo1{
+    padding-top: 10px;
+    border-radius: 50%;
+}
+.background{
+    background-color: aqua;
+    width: 350px;
+}
